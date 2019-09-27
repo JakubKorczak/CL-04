@@ -27,7 +27,7 @@ Jak widzimy nie ustawiamy właściciela pokemona - więc na starcie jest dziki i
 
 **Metody:**
 
-- fight(oponent) - metoda będzie zwracać "win/lose" w zależności czy obiekt, na którym został wywołany wygrał bądź przegrał (sposób obliczania wyniku walki został opisany w dalszej części). Parametr oponent to obiekt Pokemon.
+- fight(oponent) - metoda będzie zwracać "win/lose/draw" w zależności czy obiekt, na którym został wywołany wygrał bądź przegrał (sposób obliczania wyniku walki został opisany w dalszej części). Parametr oponent to obiekt Pokemon.
 - totalAttackPoint() - wylicza w oparciu o posiadane moce łączną liczbę punktów ataku
 - totalDefencePoint() - wylicza w oparciu o posiadane moce łączną liczbę punktów obrony
 
@@ -59,16 +59,16 @@ Otrzymuje trzy parametry:
 - pokemon - obiekt typu Pokemon - jest to jego pierwszy pokemon, którego dostaje w szkole trenerów Pokemon - ten pokemon ma być dodany do tablicy pokemons
 
 **Metody:**
-  - addPokemon(pokemon) - metoda tykonuje
-  - usuwa pokemona z tablicy poprzeniego właściciela (pokemon.owner)
-  - dodaje pokemona do tablicy aktualnego właściciela (this)
-  - ustawia pokemonowi pole owner na aktualnego właściciela
+  - addPokemon(pokemon) - metoda wykonuje:
+    - usuwa pokemona z tablicy poprzedniego właściciela (pokemon.owner)
+    - dodaje pokemona do tablicy aktualnego właściciela (this)
+    - ustawia pokemonowi pole owner na aktualnego właściciela
   - printDetails() - wyświetla informacje o właścicielu wraz z informacjami o pokemonach, które posiada
   
   
 Zasady walki
 ---
-W metodzie fight porównujemy całkowite pubkty obrony i ataku obu walczących pokemonów.
+W metodzie fight porównujemy całkowite punkty obrony i ataku obu walczących pokemonów.
 
 Do jednego dostajemy się przez this (atakujący) a do drugiego przez parametr przekazany do metody (broniący się).
 
